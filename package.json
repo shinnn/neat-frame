@@ -1,0 +1,44 @@
+{
+  "name": "neat-frame",
+  "version": "0.1.0",
+  "description": "Generate simple framed text from a string",
+  "repository": "shinnn/neat-frame",
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+  "scripts": {
+    "pretest": "eslint --fix --format=codeframe index.js test.js",
+    "test": "nyc --reporter=html --reporter=text node test.js"
+  },
+  "license": "CC0-1.0",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "frame",
+    "box",
+    "border",
+    "beautify",
+    "surround",
+    "enclose",
+    "text",
+    "string",
+    "wrap",
+    "terminal",
+    "cli-friendly"
+  ],
+  "dependencies": {
+    "inspect-with-kind": "^1.0.2",
+    "string-width": "^2.1.0",
+    "term-size": "^1.2.0",
+    "wrap-ansi": "^2.1.0"
+  },
+  "devDependencies": {
+    "@shinnn/eslint-config-node": "^4.0.2",
+    "boxen": "^1.1.0",
+    "eslint": "^4.2.0",
+    "nyc": "^11.0.3",
+    "tape": "^4.7.0"
+  },
+  "eslintConfig": {
+    "extends": "@shinnn/node"
+  }
+}
