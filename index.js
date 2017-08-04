@@ -7,7 +7,15 @@ const wrapAnsi = require('wrap-ansi');
 
 const wrapAnsiOption = {hard: true};
 
-module.exports = function neatFrame(str) {
+module.exports = function neatFrame(...args) {
+  const argLen = args.length;
+
+  if (argLen !== 1) {
+    throw new RangeError(`Expected 1 argument (string), but got ${argLen || 'no'} arguments instead.`);
+  }
+
+  const [str] = args;
+
   if (typeof str !== 'string') {
     throw new TypeError(`Expected a string to be framed with box-drawing characters, but got ${
       inspectWithKind(str)

@@ -47,8 +47,14 @@ test('neatFrame()', t => {
 
   t.throws(
     () => neatFrame(),
-    /^TypeError.*Expected a string to be framed with box-drawing characters, but got undefined\./,
+    /^RangeError.*Expected 1 argument \(string\), but got no arguments instead\./,
     'should throw an error when it takes no arguments.'
+  );
+
+  t.throws(
+    () => neatFrame('a', 'b'),
+    /^RangeError.*Expected 1 argument \(string\), but got 2 arguments instead\./,
+    'should throw an error when it takes too many arguments.'
   );
 
   t.throws(
