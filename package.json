@@ -1,7 +1,7 @@
 {
   "name": "neat-frame",
-  "version": "0.2.0",
-  "description": "Generate simple framed text from a string",
+  "version": "1.0.0",
+  "description": "Generate simple framed text",
   "repository": "shinnn/neat-frame",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
@@ -35,9 +35,9 @@
   "devDependencies": {
     "@shinnn/eslint-config-node": "^4.0.2",
     "boxen": "^1.2.1",
-    "eslint": "^4.3.0",
+    "eslint": "^4.4.1",
     "nyc": "^11.1.0",
-    "tape": "^4.7.0"
+    "tape": "^4.8.0"
   },
   "eslintConfig": {
     "extends": "@shinnn/node"

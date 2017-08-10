@@ -1,10 +1,10 @@
 # neat-frame
 
-[![NPM version](https://img.shields.io/npm/v/neat-frame.svg)](https://www.npmjs.com/package/neat-frame)
+[![npm version](https://img.shields.io/npm/v/neat-frame.svg)](https://www.npmjs.com/package/neat-frame)
 [![Build Status](https://travis-ci.org/shinnn/neat-frame.svg?branch=master)](https://travis-ci.org/shinnn/neat-frame)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/neat-frame.svg)](https://coveralls.io/github/shinnn/neat-frame?branch=master)
 
-Generate simple framed text from a string
+Generate simple framed text
 
 ```javascript
 const neatFrame = require('neat-frame');
