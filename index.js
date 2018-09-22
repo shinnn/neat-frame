@@ -30,7 +30,7 @@ module.exports = function neatFrame(...args) {
 
 	return `  ┌${verticalBar}┐
 ${padding}
-${wrapAnsi(str, contentWidth - 2, wrapAnsiOption).split(/\r?\n/).map(line => `  │ ${line}${
+${wrapAnsi(str, contentWidth - 2, wrapAnsiOption).split(/\r?\n/u).map(line => `  │ ${line}${
 		' '.repeat(Math.max(contentWidth - 2 - stringWidth(line), 0))
 	} │`).join('\n')}
 ${padding}
