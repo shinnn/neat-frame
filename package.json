@@ -28,6 +28,7 @@
 	],
 	"dependencies": {
 		"inspect-with-kind": "^1.0.5",
+		"merge-options": "^1.0.1",
 		"string-width": "^2.1.1",
 		"term-size": "^1.2.0",
 		"wrap-ansi": "^4.0.0"

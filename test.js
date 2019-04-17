@@ -46,18 +46,6 @@ test('neatFrame()', t => {
 	);
 
 	t.throws(
-		() => neatFrame(),
-		/^RangeError.*Expected 1 argument \(string\), but got no arguments instead\./u,
-		'should throw an error when it takes no arguments.'
-	);
-
-	t.throws(
-		() => neatFrame('a', 'b'),
-		/^RangeError.*Expected 1 argument \(string\), but got 2 arguments instead\./u,
-		'should throw an error when it takes too many arguments.'
-	);
-
-	t.throws(
 		() => neatFrame(Buffer.from('a')),
 		/TypeError.*Expected a string to be framed with box-drawing characters, but got <Buffer 61>\./u,
 		'should throw an error when it takes a non-string argument.'

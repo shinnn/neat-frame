@@ -4,18 +4,11 @@ const inspectWithKind = require('inspect-with-kind');
 const termSize = require('term-size');
 const stringWidth = require('string-width');
 const wrapAnsi = require('wrap-ansi');
+const mergeOptions = require('merge-options');
 
-const wrapAnsiOption = {hard: true};
+const defaultWrapAnsiOption = {hard: true};
 
-module.exports = function neatFrame(...args) {
-	const argLen = args.length;
-
-	if (argLen !== 1) {
-		throw new RangeError(`Expected 1 argument (string), but got ${argLen || 'no'} arguments instead.`);
-	}
-
-	const [str] = args;
-
+module.exports = function neatFrame(str, options) {
 	if (typeof str !== 'string') {
 		throw new TypeError(`Expected a string to be framed with box-drawing characters, but got ${
 			inspectWithKind(str)
@@ -27,6 +20,8 @@ module.exports = function neatFrame(...args) {
 
 	const padding = `  │${' '.repeat(contentWidth)}│`;
 	const verticalBar = '─'.repeat(contentWidth);
+
+	const wrapAnsiOption = mergeOptions(defaultWrapAnsiOption, options)
 
 	return `  ┌${verticalBar}┐
 ${padding}
