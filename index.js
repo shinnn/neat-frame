@@ -21,7 +21,7 @@ module.exports = function neatFrame(str, options) {
 	const padding = `  │${' '.repeat(contentWidth)}│`;
 	const verticalBar = '─'.repeat(contentWidth);
 
-	const wrapAnsiOption = mergeOptions(defaultWrapAnsiOption, options)
+	const wrapAnsiOption = mergeOptions(defaultWrapAnsiOption, options);
 
 	return `  ┌${verticalBar}┐
 ${padding}
